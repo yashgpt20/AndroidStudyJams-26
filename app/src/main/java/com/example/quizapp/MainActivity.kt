@@ -7,9 +7,9 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var questionText : TextView
     private lateinit var questionNumberText : TextView
@@ -110,7 +110,6 @@ class MainActivity : ComponentActivity() {
       val intent = Intent(this, ResultActivity::class.java)
         intent.putExtra("SCORE", score)
         intent.putExtra("TOTAL", questions.size)
-
         startActivity(intent)
 
         finish()
